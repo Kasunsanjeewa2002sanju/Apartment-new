@@ -1,44 +1,23 @@
 /* Nav.jsx */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
-import { FaUser, FaSignOutAlt, FaCaretDown } from "react-icons/fa";
 import Bookmark from "../../assets/bookmark.svg";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../../src/index.css";
 import DatePicker from "react-datepicker";
 
 function Nav() {
-  const { user, logout, isAuthenticated } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
-  const [showUserMenu, setShowUserMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close user menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (showUserMenu && !event.target.closest('.user-menu-container')) {
-        setShowUserMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [showUserMenu]);
-
-  const handleLogout = () => {
-    logout();
-    setShowUserMenu(false);
-  };
 
   return (
     <>
@@ -47,7 +26,10 @@ function Nav() {
         className={`navbar bg-[#1a1a1a]  px-8 lg:px-16 h-24 w-full fixed top-5 left-0 lg:left-10 rounded-2xl lg:w-[calc(100%-5rem)] flex justify-between items-center z-50 transition-all duration-300`}
       >
         {/* logo */}
-        <Link to="/" className="text-2xl font-bold text-white font-bricolage mr-10">
+        <Link
+          to="/"
+          className="text-2xl font-bold text-white font-bricolage mr-10"
+        >
           Heaven<span className="text-yellow-500">Pin</span>
         </Link>
 
@@ -88,7 +70,7 @@ function Nav() {
               to="/rooms"
               className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
             >
-              Rooms
+              Apartments
             </Link>
           </li>
           <li>
@@ -109,29 +91,18 @@ function Nav() {
           </li>
           <li>
             <Link
-              to="/users"
+              to="/login"
               className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
             >
-              Users
-            </Link>
-          </li>
-
-
-
-          <li>
-            <Link
-              to="/users"
-              className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
-            >
-              Users
+              Login
             </Link>
           </li>
           <li>
             <Link
-              to="/payment-records"
+              to="/register"
               className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
             >
-              Payments
+              Register
             </Link>
           </li>
           <li>
@@ -142,28 +113,6 @@ function Nav() {
               Payment
             </Link>
           </li>
-          
-          {/* Show login/register only when not authenticated */}
-          {!isAuthenticated() && (
-            <>
-              <li>
-                <Link
-                  to="/login"
-                  className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
-                >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/register"
-                  className="uppercase text-base text-yellow-500 hover:text-white transition px-4 py-2 lg:px-0 lg:py-0 block"
-                >
-                  Register
-                </Link>
-              </li>
-            </>
-          )}
         </ul>
 
         {/* right‑side buttons */}
@@ -179,39 +128,6 @@ function Nav() {
             />
             <span className="hidden xl:block">Book&nbsp;Now</span>
           </button>
-
-          {/* User Menu - Show when authenticated */}
-          {isAuthenticated() && (
-            <div className="relative user-menu-container">
-              <button
-                onClick={() => setShowUserMenu(!showUserMenu)}
-                className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors duration-300"
-              >
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <FaUser className="w-4 h-4 text-white" />
-                </div>
-                <span className="hidden lg:block text-sm font-medium">{user?.name}</span>
-                <FaCaretDown className="w-3 h-3" />
-              </button>
-
-              {/* User Dropdown Menu */}
-              {showUserMenu && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
-                  <div className="px-4 py-2 border-b border-gray-200">
-                    <p className="text-sm font-medium text-gray-900">{user?.name}</p>
-                    <p className="text-xs text-gray-500">{user?.gmail}</p>
-                  </div>
-                  <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors duration-200"
-                  >
-                    <FaSignOutAlt className="w-4 h-4" />
-                    Logout
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
 
           {/* mobile menu toggle */}
           <div className="lg:hidden block">
@@ -230,64 +146,118 @@ function Nav() {
 
         {/* modal form */}
         {isModalOpen && (
-          <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,0.9)]">
-            <div className="bg-white w-full max-w-[500px] p-[40px] rounded-[15px] shadow-lg relative">
+          <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[rgba(0,0,0,0.85)]">
+            <div className="bg-[#1e293b] w-full max-w-[500px] p-[40px] rounded-[15px] shadow-xl relative max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute hover:bg-[#ecb934] hover:text-white transition duration-300 top-4 right-4 rounded-[50%] w-[50px] h-[50px] text-xl text-black font-bold bg-[#eafbfb] flex items-center justify-center"
+                className="absolute hover:bg-red-500 hover:text-white transition duration-300 top-4 right-4 rounded-full w-[50px] h-[50px] text-xl text-gray-200 font-bold bg-[#334155] flex items-center justify-center"
               >
                 <span className="bi bi-x-lg"></span>
               </button>
-              <h2 className="text-3xl font-semibold mb-12">Search</h2>
+
+              <h2 className="text-3xl font-semibold mb-12 text-gray-100">
+                Book Your Apartment
+              </h2>
+
               <form className="space-y-6">
+                {/* Check-in */}
                 <div className="mb-6 relative">
-                  <label className="block text-sm font-medium text-[#204f5e] tracking-widest uppercase mb-2">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
                     Check-in
                   </label>
-                  <div className="relative ">
+                  <div className="relative">
                     <DatePicker
                       selected={checkInDate}
                       onChange={(date) => setCheckInDate(date)}
                       placeholderText="Select Check-in Date"
-                      className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none pr-10"
+                      className="w-full p-3 h-[60px] bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none pr-10"
                       dateFormat="dd/MM/yyyy"
                     />
-                    <i className="ri-calendar-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    <i className="ri-calendar-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                   </div>
                 </div>
 
+                {/* Check-out */}
                 <div className="mb-6 relative">
-                  <label className="block text-sm font-medium text-[#204f5e] tracking-widest uppercase mb-2">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
                     Check-out
                   </label>
                   <div className="relative">
                     <DatePicker
                       selected={checkOutDate}
                       onChange={(date) => setCheckOutDate(date)}
-                      placeholderText="Select Date"
-                      className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none pl-10"
+                      placeholderText="Select Check-out Date"
+                      className="w-full p-3 h-[60px] bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none pr-10"
                       dateFormat="dd/MM/yyyy"
                     />
-                    <i className="ri-calendar-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    <i className="ri-calendar-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                   </div>
                 </div>
 
+                {/* Adults */}
                 <div className="mb-6 relative">
-                  <label className="block text-sm font-medium text-[#204f5e] tracking-widest uppercase mb-2">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
                     Adults
                   </label>
                   <input
                     type="number"
                     placeholder="0"
                     min="1"
-                    className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
+                    className="w-full p-3 h-[60px] bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none"
                   />
                 </div>
+
+                {/* Children */}
+                <div className="mb-6 relative">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
+                    Children
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="0"
+                    min="0"
+                    className="w-full p-3 h-[60px] bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none"
+                  />
+                </div>
+
+                {/* Apartment type */}
+                <div className="mb-6 relative">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
+                    Apartment Type
+                  </label>
+                  <select className="w-full p-3 h-[60px] bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none">
+                    <option>Studio</option>
+                    <option>1 Bedroom</option>
+                    <option>2 Bedrooms</option>
+                    <option>3 Bedrooms</option>
+                    <option>Luxury Suite</option>
+                    <option>Penthouse</option>
+                    <option>Duplex</option>
+                    <option>Villa</option>
+                    <option>Loft</option>
+                    <option>Townhouse</option>
+                  </select>
+                </div>
+
+                {/* Special Requests */}
+                
+                <div className="mb-6 relative">
+                  <label className="block text-sm font-medium text-gray-300 tracking-widest uppercase mb-2">
+                    Special Requests
+                  </label>
+                  <textarea
+                    placeholder="Any additional needs?"
+                    className="w-full p-3 bg-[#0f172a] text-gray-100 rounded border border-[#334155] outline-none"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                {/* Submit */}
                 <button
                   type="submit"
-                  className="bg-sky-400 hover:bg-sky-500 text-white py-3 px-5 rounded-full w-full uppercase tracking-widest transition-colors duration-300"
+                  className="bg-sky-600 hover:bg-sky-500 text-white py-3 px-5 rounded-full w-full uppercase tracking-widest transition-colors duration-300"
                 >
-                  Search
+                  Book Now
                 </button>
               </form>
             </div>

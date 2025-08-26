@@ -65,11 +65,11 @@ function RoomsDetails() {
 
         <div className="section-banner-content flex items-center flex-col text-center z-[55]">
           <h1 className="text-7xl font-semibold">
-            Get your <br /> dream Room
+            Choose your <br /> dream Apartment
           </h1>
           <div className="mt-10 bg-[#d5f1f1] w-[250px] p-2 text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">RoomsDetails</span>
+            <span className="text-gray-500">ApartmentDetails</span>
           </div>
         </div>
       </div>
@@ -278,7 +278,7 @@ function RoomsDetails() {
               </h2>
               <div className="w-full rounded-xl overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126264.47339565857!2d80.13820646917938!3d6.055891279241449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c19decb3b7%3A0x1f67d51d4045e97f!2sGalle!5e0!3m2!1sen!2slk!4v1721315689816!5m2!1sen!2slk"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126264.47339565857!2d80.7832!3d6.9483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c19decb3b7%3A0x1f67d51d4045e97f!2sNuwara+Eliya!5e0!3m2!1sen!2slk!4v1690000000000!5m2!1sen!2slk"
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
@@ -300,7 +300,7 @@ function RoomsDetails() {
             </div>
             <div className="flex justify-around bg-[#e8faff] py-3 rounded-xl text-[#1d5c63] font-medium text-sm">
               <div className="flex items-center gap-2">
-                <i className="ri-user-line text-lg"></i> Adults: {room.adults}
+                <i className="ri-user-line text-lg"></i> Per Person: {room.forPerson}
               </div>
               <div className="flex items-center gap-2">
                 <i className="ri-aspect-ratio-line text-lg"></i> Size:{" "}
