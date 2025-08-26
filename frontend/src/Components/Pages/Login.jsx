@@ -1,13 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash, FaGoogle, FaFacebook, FaEnvelope, FaLock, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { AuthContext } from '../../context/AuthContext';
-import axios from 'axios';
 import './Login.css';
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -88,27 +84,20 @@ const Login = () => {
     setMessage({ type: '', text: '' });
     
     try {
-      // Make API call to backend
-      const response = await axios.post('http://localhost:4000/api/users/login', {
-        gmail: formData.email,
-        password: formData.password
-      });
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
-      if (response.data.token && response.data.user) {
-        // Login successful
-        login(response.data.user, response.data.token);
-        setMessage({ type: 'success', text: 'Login successful! Redirecting...' });
-        
-        // Redirect to home after a short delay
-        setTimeout(() => {
-          navigate('/');
-        }, 1500);
-      }
+      // Handle login logic here
+      console.log('Login attempt:', formData);
+      
+      // For demo purposes, show success message
+      setMessage({ type: 'success', text: 'Login successful! Redirecting...' });
+      
+      // In real app, you would redirect here
+      // navigate('/dashboard');
       
     } catch (error) {
-      console.error('Login error:', error);
-      const errorMessage = error.response?.data?.error || 'Login failed. Please try again.';
-      setMessage({ type: 'error', text: errorMessage });
+      setMessage({ type: 'error', text: 'Login failed. Please try again.' });
     } finally {
       setIsLoading(false);
     }

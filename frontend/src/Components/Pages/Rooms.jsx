@@ -58,11 +58,11 @@ function Rooms() {
 
         <div className="section-banner-content flex items-center flex-col text-center z-[55]">
           <h1 className="text-7xl font-semibold text-white">
-            Choose the room <br /> of your dream
+            Discover the apartment <br /> made for you
           </h1>
           <div className="mt-10 bg-[#eab308] w-[250px] p-2 text-xl rounded text-black font-medium">
             <Link to="/" className='hover:text-white transition-colors'>Home</Link> &nbsp; / &nbsp;
-            <span className="text-black">Rooms</span>
+            <span className="text-black">Apartments</span>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ function Rooms() {
                   
                   <div className="room-features flex flex-wrap gap-2 mb-4">
                     <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
-                      Adults: {room.adults}
+                      Per Person: {room.forPerson}
                     </span>
                     <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
                       Size: {room.size}

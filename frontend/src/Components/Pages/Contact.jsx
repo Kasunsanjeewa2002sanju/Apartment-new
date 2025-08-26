@@ -186,10 +186,11 @@ function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Our Location</h3>
               <p className="text-gray-300 text-sm">
-                123 Beach Road<br />
-                Paradise City, PC 12345<br />
-                United States
+                12 Hilltop Lane<br />
+                Nuwara Eliya, Central Province 22200<br />
+                Sri Lanka
               </p>
+
             </div>
 
             <div className="text-center p-6 bg-gradient-to-br from-[#1a1a1a] to-[#222831] rounded-lg border border-gray-800 hover:border-[#eab308] transition-colors duration-300">
@@ -198,8 +199,8 @@ function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone Number</h3>
               <p className="text-gray-300 text-sm">
-                +1 (555) 123-4567<br />
-                +1 (555) 987-6543<br />
+                +94 77 123 4567<br />
+                +94 71 987 6543<br />
                 Mon-Fri 9AM-6PM
               </p>
             </div>
@@ -210,11 +211,13 @@ function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Address</h3>
               <p className="text-gray-300 text-sm">
-                info@hotellux.com<br />
-                reservations@hotellux.com<br />
-                support@hotellux.com
+                info@heavenpinweb.com<br />
+                reservations@heavenpinweb.com<br />
+                support@heavenpinweb.com
+
               </p>
             </div>
+            
           </div>
         </div>
       </section>

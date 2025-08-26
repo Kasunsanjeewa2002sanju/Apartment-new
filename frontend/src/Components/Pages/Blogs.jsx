@@ -48,7 +48,10 @@ function Blogs() {
         <div className="section-banner-content flex items-center flex-col text-center z-[55]">
           <h1 className="text-7xl font-semibold text-white">Our Blogs</h1>
           <div className="mt-10 bg-[#eab308] w-[250px] p-2 text-xl rounded text-black font-medium">
-            <Link to="/" className='hover:text-white transition-colors'>Home</Link> &nbsp; / &nbsp;
+            <Link to="/" className="hover:text-white transition-colors">
+              Home
+            </Link>{" "}
+            &nbsp; / &nbsp;
             <span className="text-black">Blogs</span>
           </div>
         </div>
@@ -66,21 +69,23 @@ function Blogs() {
               Popular Publications
             </h2>
           </div>
-          
+
           {/* Blog grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {[
               {
-                image: blog1,
-                date: "15-02-2025",
-                title: "The best travel insurance company for your holiday trip.",
-                excerpt: "Discover the essential tips and recommendations for choosing the perfect travel insurance that will protect your journey and give you peace of mind."
+                image: "https://images.unsplash.com/photo-1705681948348-a449961555dd?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                date: "14-08-2025",
+                title: "Choosing the Right Countryside Apartment: Space, View, and Access",
+                excerpt:
+                  "A practical framework to evaluate rural apartments—floor plans, natural light, outdoor access, and proximity to trails—so every stay feels like home.",
               },
               {
-                image: blog2,
-                date: "12-03-2025",
-                title: "Ultimate guide to Travelling when you have no money.",
-                excerpt: "Learn how to explore the world on a budget with our comprehensive guide to affordable travel without compromising on experiences."
+                image: "https://images.unsplash.com/photo-1624204386084-dd8c05e32226?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGFwYXJ0bWVudHN8ZW58MHx8MHx8fDA%3D",
+                date: "07-08-2025",
+                title: "Amenities that Matter in Rural Serviced Apartments",
+                excerpt:
+                  "From full kitchens to private terraces and secure parking—learn which amenities improve comfort, productivity, and family-friendly stays.",
               },
             ].map((item, index) => (
               <div
@@ -105,15 +110,15 @@ function Blogs() {
                     <span>•</span>
                     <span>{item.date}</span>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#eab308] transition-colors">
                     {item.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {item.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/blogs/${index + 1}`}
@@ -132,27 +137,29 @@ function Blogs() {
 
           {/* More Blog Posts */}
           <div className="mt-16">
-            <h3 className="text-2xl font-semibold text-white mb-8 text-center">Latest Articles</h3>
+            <h3 className="text-2xl font-semibold text-white mb-8 text-center">
+              Latest Articles
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  image: blog3,
+                  image: "https://images.unsplash.com/photo-1680416124510-5eae1beca412?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGx1eHVhcnklMjBhcGFydG1lbnR8ZW58MHwwfDB8fHww",
                   date: "10-03-2025",
-                  title: "Top 10 Beach Destinations for 2025",
-                  category: "Travel Tips"
+                  title: "Top 10 Apartment Stays for 2025",
+                  category: "Apartment Living",
                 },
                 {
-                  image: blog4,
+                  image: "https://images.unsplash.com/photo-1730819852720-cf8a9c422ba6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
                   date: "08-03-2025",
-                  title: "Luxury Hotel Amenities You Should Know",
-                  category: "Luxury"
+                  title: "Must-Have Amenities in Modern Apartments",
+                  category: "Lifestyle",
                 },
                 {
-                  image: blog5,
+                  image: "https://images.unsplash.com/photo-1580041065738-e72023775cdc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwYXBhcnRtZW50c3xlbnwwfDB8MHx8fDA%3D",
                   date: "05-03-2025",
-                  title: "Sustainable Tourism: Eco-Friendly Travel",
-                  category: "Sustainability"
-                }
+                  title: "Eco-Friendly Apartment Rentals: A Sustainable Choice",
+                  category: "Sustainability",
+                },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -172,11 +179,11 @@ function Blogs() {
                       </span>
                       <span className="text-xs text-gray-400">{item.date}</span>
                     </div>
-                    
+
                     <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-[#eab308] transition-colors">
                       {item.title}
                     </h4>
-                    
+
                     <Link
                       to={`/blogs/${index + 3}`}
                       className="text-[#eab308] hover:text-[#fbbf24] text-sm font-medium transition-colors inline-flex items-center"
@@ -194,7 +201,8 @@ function Blogs() {
           <div className="mt-16 p-8 bg-gradient-to-r from-[#eab308] to-[#fbbf24] rounded-2xl text-center">
             <h3 className="text-2xl font-bold text-black mb-4">Stay Updated</h3>
             <p className="text-black mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest travel tips, hotel updates, and exclusive offers delivered straight to your inbox.
+              Subscribe to our newsletter for the latest travel tips, hotel
+              updates, and exclusive offers delivered straight to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

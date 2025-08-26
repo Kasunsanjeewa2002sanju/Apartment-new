@@ -15,8 +15,6 @@ import sercive2 from "../../assets/2.jpeg";
 import sercive3 from "../../assets/3.jpeg";
 import sercive4 from "../../assets/4.jpeg";
 
-
-
 import element1 from "../../assets/element-1.png";
 import element2 from "../../assets/element-2.png";
 import element3 from "../../assets/element-3.png";
@@ -52,39 +50,39 @@ function Index() {
   const testimonials = [
     {
       name: "Sarah Newman",
-      company: "Envato Market",
+      company: "Remote Designer, Upwork",
       message:
-        "An unforgettable stay at Aquarelle! The beachfront location provided breathtaking views, and the hotel's blend of luxury and a relaxed atmosphere was perfect. The attentive staff and excellent amenities, including a refreshing pool and superb dining options, made my experience truly exceptional. Aquarelle is a haven for those seeking relaxation with a touch of indulgence.",
+        "Our stay at Skyline Apartments was unforgettable! The city view from the balcony was breathtaking, and the apartment had the perfect mix of comfort and modern style. The check-in was smooth, and everything we needed was already prepared. Highly recommend for anyone looking for a relaxing city break.",
     },
     {
       name: "Ethen Patel",
-      company: "Creative Market",
+      company: "Marketing Specialist, HubSpot",
       message:
-        "From the friendly reception to the elegant rooms, Aquarelle exceeded my expectations. The beach access is ideal for morning walks, and the restaurant serves some of the freshest seafood I've had. This place blends sophistication with natural beauty effortlessly. Can't wait to return!",
+        "The apartment was spotless and beautifully furnished. The location was ideal—close to restaurants and public transport. Having a full kitchen made it easy to cook when we didn’t feel like eating out. It felt just like home but with a touch of luxury!",
     },
     {
       name: "Amelia Johnson",
-      company: "CodeCanyon",
+      company: "Software Engineer, CodeCanyon",
       message:
-        "What a relaxing and enjoyable experience! Aquarelle delivered everything I needed - peace, luxury, and delicious food. The poolside area was perfect for spending a lazy afternoon. I appreciated how clean and well-maintained the entire property was. Truly a gem on the coast!",
+        "I loved my stay at GreenLeaf Apartments. It was quiet, secure, and perfect for unwinding after work. The Wi-Fi was fast, the bed was super comfy, and the place was well-maintained. I’ll definitely book again for my next business trip.",
     },
     {
       name: "Liam Carter",
-      company: "ThemeForest",
+      company: "Freelance Photographer",
       message:
-        "Aqoarelle is a beautiful retreat! The views from the suite were stunning, and the attention to detail throughout the hotel was impressive. The staff made us feel welcome from the moment we arrived, and the spa treatments were top-notch. I'd recommend this place to anyone looking to unwind in style.",
+        "A wonderful apartment! The attention to detail in the interior design really stood out. I had everything I needed, from a cozy living room to a modern kitchen. The host was friendly and helpful throughout the stay. Perfect spot for both work and relaxation.",
     },
     {
-      name: "Liam Carter",
-      company: "ThemeForest",
+      name: "Olivia Bennett",
+      company: "Travel Blogger",
       message:
-        "Aqoarelle is a beautiful retreat! The views from the suite were stunning, and the attention to detail throughout the hotel was impressive. The staff made us feel welcome from the moment we arrived, and the spa treatments were top-notch. I'd recommend this place to anyone looking to unwind in style.",
+        "Absolutely loved the stay! The apartment was spacious, clean, and had an amazing rooftop lounge. It was close to all the main attractions, yet quiet enough to rest peacefully at night. I’ll be recommending this to my followers for sure!",
     },
     {
-      name: "Amelia Johnson",
-      company: "CodeCanyon",
+      name: "Daniel Wong",
+      company: "Project Manager, TechWorks",
       message:
-        "What a relaxing and enjoyable experience! Aquarelle delivered everything I needed - peace, luxury, and delicious food. The poolside area was perfect for spending a lazy afternoon. I appreciated how clean and well-maintained the entire property was. Truly a gem on the coast!",
+        "Great value for money! The apartment was well-equipped with everything a traveler could ask for. The neighborhood felt safe, and the host was quick to respond to any questions. A smooth and pleasant experience overall.",
     },
   ];
 
@@ -243,10 +241,10 @@ function Index() {
       <div className="py-[80px] bg-gradient-to-br from-[#1a1a1a] via-[#222831] to-[#0f0f0f]">
         <div className="section-title text-center w-full space-y-4 ">
           <span className="bg-[#eab308] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase text-black font-extrabold">
-            Rooms
+            APARTMENTS
           </span>
           <h1 className="text-2xl sm:text-5xl font-semibold w-full xl:w-[50%] mx-auto leading-tight text-white">
-            Our Best Rooms
+            Our Best Apartments
           </h1>
         </div>
       </div>
@@ -279,7 +277,7 @@ function Index() {
               <div className="bg-gradient-to-br from-[#1a1a1a] via-[#222831] to-[#0f0f0f] flex gap-4 px-4 py-3 text-sm">
                 <span className="flex items-center gap-1 text-yellow-500">
                   <i className="text-black bg-yellow-500 shadow rounded py-1 px-3 ri-user-line"></i>
-                  Adults: {room.adults}
+                  ForPerson: {room.forPerson}
                 </span>
                 <span className="flex items-center gap-1 text-yellow-500">
                   <i className="shadow rounded py-1 px-3 ri-aspect-ratio-line text-black bg-yellow-500"></i>
@@ -293,7 +291,9 @@ function Index() {
                     <h3 className="text-2xl font-semibold mb-1 text-yellow-500">
                       {room.title}
                     </h3>
-                    <p className="text-md text-gray-500 text-white">{room.description}</p>
+                    <p className="text-md text-gray-500 text-white">
+                      {room.description}
+                    </p>
                   </div>
                   <div className="border-t mt-4 pt-4 flex justify-between items-center ">
                     <p className="text-lg font-bold text-[#000] text-yellow-500">
@@ -318,7 +318,7 @@ function Index() {
               About Us
             </span>
             <h1 className="pb-5 text-2xl sm:text-5xl font-semibold w-full leading-tight text-white">
-              Why more than a million people choose us
+              Why more than a million people choose our apartments
             </h1>
 
             <ul className="flex flex-col gap-10">
@@ -326,12 +326,12 @@ function Index() {
                 <span className="text-2xl font-bold text-[#ecb934]">01.</span>
                 <div>
                   <h4 className="md:text-2xl text-xl font-semibold mb-2 text-yellow-500">
-                    Ocean Oasis
+                    Deluxe Room
                   </h4>
                   <p className="text-base md:text-lg text-white">
-                    We reveal the complete experience, crafted by the true
-                    originator with thoughtful design and a vision of
-                    excellence.
+                    Spacious and elegantly designed, our Deluxe Rooms provide
+                    comfort with modern interiors, premium bedding, and an
+                    inviting atmosphere.
                   </p>
                 </div>
               </li>
@@ -340,12 +340,12 @@ function Index() {
                 <span className="text-2xl font-bold text-[#ecb934]">02.</span>
                 <div>
                   <h4 className="md:text-2xl text-xl font-semibold mb-2 text-yellow-500">
-                    Beach Heavan
+                    Family Suite
                   </h4>
                   <p className="text-base md:text-lg text-white">
-                    We proudly unveil the full experience, thoughtfully crafted
-                    by the originator of truth and a visionary architect of
-                    bliss.
+                    Perfect for families or groups, featuring multiple beds, a
+                    comfortable lounge area, and all essentials for a relaxing
+                    stay.
                   </p>
                 </div>
               </li>
@@ -354,12 +354,12 @@ function Index() {
                 <span className="text-2xl font-bold text-[#ecb934]">03.</span>
                 <div>
                   <h4 className="md:text-2xl text-xl font-semibold mb-2 text-yellow-500">
-                    Sunset Bliss
+                    Penthouse Suite
                   </h4>
                   <p className="text-base md:text-lg text-white">
-                    We reveal the complete truth a creation shaped by the
-                    visionary who first imagined it, blending honesty with
-                    thoughtful design.
+                    Experience luxury living with breathtaking views, stylish
+                    design, a private balcony, and premium facilities for your
+                    comfort.
                   </p>
                 </div>
               </li>
@@ -428,16 +428,19 @@ function Index() {
             </h1>
 
             <p className="text-gray-500 mb-4 text-white">
-              We honor those who endure and reveal the complete story sharing
-              insights of a blessed life, for without effort, no true reward is
-              possible
+              Discover the comfort of thoughtfully designed apartments where
+              every stay feels like home. From cozy studios to spacious family
+              suites, we ensure your experience is tailored for both relaxation
+              and convenience.
             </p>
+
             <p className="text-gray-500 mb-8 text-white">
-              In our pursuit of joy and fulfillment, we often face challenges
-              and discomfort. True reward comes through effort and dedication.
-              Pleasure is meaningful only when earned, and comfort follows
-              commitment not convenience.
+              Whether you're traveling for business, leisure, or a long-term
+              getaway, our apartments combine modern amenities with a welcoming
+              atmosphere. Book your stay today and enjoy the perfect balance of
+              comfort, style, and affordability.
             </p>
+
             <div className="flex w-full flex-col sm:flex-row items-center gap-4">
               <button className="bg-[#fdc335] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:bg-[#e6ae00] transition duration-300">
                 <svg
@@ -548,11 +551,11 @@ function Index() {
         </h1>
 
         {/* Blog wrapper  ------------------------------------------------------- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full text-left">
-          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
-            <div className="overflow-hidden rounded-t-[16px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full text-left ">
+          <div className=" rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
+            <div className="overflow-hidden rounded-t-[16px] ">
               <img
-                src={blog1}
+                src="https://images.unsplash.com/photo-1698870157085-11632d2ddef8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGl2aW5ncm9vbSUyMGRhcmt8ZW58MHx8MHx8fDA%3D"
                 alt="blog-image"
                 className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
               />
@@ -560,7 +563,7 @@ function Index() {
             <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]">
               <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
                 <img
-                  src={blog1}
+                  src="https://images.unsplash.com/photo-1698870157085-11632d2ddef8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGl2aW5ncm9vbSUyMGRhcmt8ZW58MHx8MHx8fDA%3D"
                   alt="blog-image"
                   className="w-6 h-6 rounded-full object-cover"
                 />
@@ -569,11 +572,12 @@ function Index() {
                 <span>24.09.2025</span>
               </div>
               <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb-2 leading-snug">
-                Why your next amaizing adventure should be on the beach
+                Ultimate Guide to Booking Budget-Friendly Apartments
               </h3>
               <p className="text-gray-600 text-sm mb-4">
-                I will explain to you the entire story of how things are said to
-                be from the blessed lives of those who are blamed and praised.
+                Discover practical tips on finding affordable apartments without
+                compromising comfort, from hidden gems to flexible booking
+                strategies.
               </p>
               <a
                 href="#"
@@ -585,18 +589,18 @@ function Index() {
             </div>
           </div>
 
-          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
+          <div className=" rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
             <div className="overflow-hidden rounded-t-[16px]">
               <img
-                src={blog2}
+                src="https://images.unsplash.com/photo-1678705424487-a59e52b08275?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGxpdmluZ3Jvb20lMjBkYXJrfGVufDB8fDB8fHww"
                 alt="blog-image"
                 className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]">
+            <div className="p-4 bg-[#f2fbfb] rounded-b-[16px] ">
               <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
                 <img
-                  src={blog2}
+                  src="https://images.unsplash.com/photo-1678705424487-a59e52b08275?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGxpdmluZ3Jvb20lMjBkYXJrfGVufDB8fDB8fHww"
                   alt="blog-image"
                   className="w-6 h-6 rounded-full object-cover"
                 />
@@ -605,11 +609,12 @@ function Index() {
                 <span>24.09.2025</span>
               </div>
               <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb-2 leading-snug">
-                The Best Travel Insuarance Companies for Seniors
+                Essential Amenities to Look for in a Rental Apartment
               </h3>
               <p className="text-gray-600 text-sm mb-4">
-                I will explain to you the entire story of how things are said to
-                be from the blessed lives of those who are blamed and praised.
+                Learn which features matter most when choosing an apartment
+                Wi-Fi, kitchen setup, security, and more to make your stay
+                stress-free.
               </p>
               <a
                 href="#"
@@ -621,10 +626,10 @@ function Index() {
             </div>
           </div>
 
-          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
+          <div className=" rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group p-4">
             <div className="overflow-hidden rounded-t-[16px]">
               <img
-                src={blog3}
+                src="https://images.unsplash.com/photo-1722888471079-d2c2b3eeb6ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGxpdmluZ3Jvb20lMjBkYXJrfGVufDB8fDB8fHww"
                 alt="blog-image"
                 className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
               />
@@ -632,7 +637,7 @@ function Index() {
             <div className="p-4 bg-[#f2fbfb] rounded-b-[16px]">
               <div className="flex items-center text-sm text-gray-500 gap-2 mb-4">
                 <img
-                  src={blog3}
+                  src="https://images.unsplash.com/photo-1722888471079-d2c2b3eeb6ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGxpdmluZ3Jvb20lMjBkYXJrfGVufDB8fDB8fHww"
                   alt="blog-image"
                   className="w-6 h-6 rounded-full object-cover"
                 />
@@ -641,11 +646,12 @@ function Index() {
                 <span>24.09.2025</span>
               </div>
               <h3 className="font-semibold xl:text-2xl text-xl text-[#1d2b3a] mb-2 leading-snug">
-                18 Easy steps for Planing your Next Trip
+                10 Simple Steps to Find Your Ideal Apartment Stay
               </h3>
               <p className="text-gray-600 text-sm mb-4">
-                I will explain to you the entire story of how things are said to
-                be from the blessed lives of those who are blamed and praised.
+                A step-by-step guide on how to choose the right apartment for
+                your next trip covering budget, location, reviews, and host
+                reliability.
               </p>
               <a
                 href="#"

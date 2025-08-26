@@ -2,12 +2,12 @@
   {
     "id": "1",
     "type": "Economy",
-    "title": "Ocean View",
+    "title": "Rustic Studio — Meadow View",
     "image": "/Images/rooms-1.jpg",
-    "description": "Enjoy the breathtaking view of the ocean from your window. Perfect for a peaceful and budget-friendly getaway.",
-    "adults": 2,
-    "size": "95 ft2",
-    "price": "$49",
+    "description": "Cozy studio with a kitchenette and writing desk, opening to gentle meadow views. Perfect for solo travelers or couples seeking a peaceful countryside stay.",
+    "forPerson": 2,
+    "size": "320 ft2",
+    "price": "$99",
     "photos": [
       "/Images/rooms-1.jpg",
       "/Images/rooms-1-photo-1.jpg",
@@ -17,12 +17,12 @@
   {
     "id": "2",
     "type": "Luxury",
-    "title": "Sunset Suite",
+    "title": "Premium 1-Bedroom — Sunset Over Fields",
     "image": "/Images/rooms-2.jpg",
-    "description": "Experience luxury and style with a stunning view of the sunset. Ideal for solo travelers looking for comfort.",
-    "adults": 1,
-    "size": "65 ft2",
-    "price": "$45",
+    "description": "Spacious one-bedroom with a cozy fireplace, farmhouse-style fully equipped kitchen, and a balcony facing golden fields at dusk. Ideal for longer stays and remote work.",
+    "forPerson": 2,
+    "size": "720 ft2",
+    "price": "$169",
     "photos": [
       "/Images/rooms-2.jpg",
       "/Images/rooms-2-photo-1.jpg",
@@ -33,12 +33,12 @@
   {
     "id": "3",
     "type": "Standard",
-    "title": "Beachfront Bliss",
+    "title": "Family 2-Bedroom — Farmhouse Wing",
     "image": "/Images/rooms-3.jpg",
-    "description": "Relax in this comfortable beachfront room, designed for families or friends to enjoy a tropical escape.",
-    "adults": 3,
-    "size": "95 ft2",
-    "price": "$59",
+    "description": "Comfortable two-bedroom annex to the farmhouse with open-plan lounge, dining nook, and covered porch. Great for families seeking nature trails and village life.",
+    "forPerson": 4,
+    "size": "980 ft2",
+    "price": "$219",
     "photos": [
       "/Images/rooms-3.jpg",
       "/Images/rooms-3-photo-1.jpg"
@@ -47,12 +47,12 @@
   {
     "id": "4",
     "type": "Economy",
-    "title": "Coastal Retreat",
+    "title": "Compact Studio — Countryside Retreat",
     "image": "/Images/rooms-4.jpg",
-    "description": "A quiet and cozy room near the coast. Offers great value and a restful environment close to the beach.",
-    "adults": 2,
-    "size": "105 ft2",
-    "price": "$99",
+    "description": "Quiet, compact studio along a leafy village lane featuring a kitchenette, queen bed, and smart storage. A great-value base for hikes, farm visits, and local markets.",
+    "forPerson": 2,
+    "size": "360 ft2",
+    "price": "$89",
     "photos": [
       "/Images/rooms-4.jpg",
       "/Images/rooms-4-photo-1.jpg"
@@ -61,12 +61,12 @@
   {
     "id": "5",
     "type": "Luxury",
-    "title": "Seaside Heaven",
+    "title": "Luxury Loft — Valley Sky Terrace",
     "image": "/Images/rooms-5.jpg",
-    "description": "Indulge in comfort and elegance by the sea. This luxury suite is designed for unforgettable coastal stays.",
-    "adults": 3,
-    "size": "75 ft2",
-    "price": "$89",
+    "description": "Top-floor loft with panoramic valley views, a private roof terrace, gourmet kitchen, and timber-beam finishes. A statement countryside stay for special occasions.",
+    "forPerson": 4,
+    "size": "1,450 ft2",
+    "price": "$329",
     "photos": [
       "/Images/rooms-5.jpg",
       "/Images/rooms-5-photo-1.jpg"
@@ -75,12 +75,12 @@
   {
     "id": "6",
     "type": "Standard",
-    "title": "Tropical Paradise",
+    "title": "Garden-Level 1-Bedroom — Courtyard Access",
     "image": "/Images/rooms-6.jpg",
-    "description": "Immerse yourself in tropical beauty with this well-equipped room. Great for couples or small families.",
-    "adults": 2,
-    "size": "50 ft2",
-    "price": "$39",
+    "description": "Relaxed one-bedroom opening onto a private courtyard herb garden, with open-plan living and a well-equipped kitchen. Ideal for couples or remote workers seeking quiet.",
+    "forPerson": 2,
+    "size": "680 ft2",
+    "price": "$149",
     "photos": [
       "/Images/rooms-6.jpg",
       "/Images/rooms-6-photo-1.jpg"
