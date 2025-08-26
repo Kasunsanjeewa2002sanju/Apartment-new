@@ -1,0 +1,346 @@
+/* Login.css - Custom styles for the Login component */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fbbf24;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Custom focus styles */
+.login-input:focus {
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+/* Hover effects for buttons */
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Social login button hover effects */
+.social-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animated background pattern */
+.bg-pattern {
+  animation: float 6s ease-in-out infinite;
+}
+
+.bg-pattern:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.bg-pattern:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Form field animations */
+.form-field {
+  transition: all 0.3s ease;
+}
+
+.form-field:focus-within {
+  transform: scale(1.02);
+}
+
+/* Logo animation */
+.logo-container {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .login-container {
+    min-height: 100vh;
+  }
+  
+  .left-section {
+    display: none;
+  }
+  
+  .right-section {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
+/* Left side carousel full coverage */
+.left-carousel-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ensure carousel content is properly layered */
+.carousel-content-layer {
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .login-form {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+  
+  .form-input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+  
+  .form-input::placeholder {
+    color: #9ca3af;
+  }
+}
+
+/* Loading state styles */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #fbbf24;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success/Error message styles */
+.message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* Enhanced focus ring for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom checkbox styling */
+.custom-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+}
+
+.custom-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.custom-checkbox:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Carousel specific styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-dot {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot:hover {
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background-color: #fbbf24;
+  transform: scale(1.25);
+}
+
+.carousel-arrow {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Enhanced carousel navigation */
+.carousel-navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+/* Carousel content animations */
+.carousel-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image overlay gradient */
+.carousel-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+/* Responsive carousel adjustments */
+@media (max-width: 1024px) {
+  .carousel-navigation {
+    bottom: 20px;
+  }
+  
+  .carousel-arrow {
+    padding: 8px;
+  }
+}
+
+/* Smooth image transitions */
+.carousel-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image-container img {
+  transition: transform 0.3s ease;
+}
+
+.carousel-image-container:hover img {
+  transform: scale(1.05);
+} 

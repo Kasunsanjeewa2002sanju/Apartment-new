@@ -1,0 +1,89 @@
+[
+  {
+    "id": "1",
+    "type": "Economy",
+    "title": "Ocean View",
+    "image": "/Images/rooms-1.jpg",
+    "description": "Enjoy the breathtaking view of the ocean from your window. Perfect for a peaceful and budget-friendly getaway.",
+    "adults": 2,
+    "size": "95 ft2",
+    "price": "$49",
+    "photos": [
+      "/Images/rooms-1.jpg",
+      "/Images/rooms-1-photo-1.jpg",
+      "/Images/rooms-1-photo-2.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "type": "Luxury",
+    "title": "Sunset Suite",
+    "image": "/Images/rooms-2.jpg",
+    "description": "Experience luxury and style with a stunning view of the sunset. Ideal for solo travelers looking for comfort.",
+    "adults": 1,
+    "size": "65 ft2",
+    "price": "$45",
+    "photos": [
+      "/Images/rooms-2.jpg",
+      "/Images/rooms-2-photo-1.jpg",
+      "/Images/rooms-2-photo-2.jpg",
+      "/Images/rooms-2-photo-3.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "type": "Standard",
+    "title": "Beachfront Bliss",
+    "image": "/Images/rooms-3.jpg",
+    "description": "Relax in this comfortable beachfront room, designed for families or friends to enjoy a tropical escape.",
+    "adults": 3,
+    "size": "95 ft2",
+    "price": "$59",
+    "photos": [
+      "/Images/rooms-3.jpg",
+      "/Images/rooms-3-photo-1.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "type": "Economy",
+    "title": "Coastal Retreat",
+    "image": "/Images/rooms-4.jpg",
+    "description": "A quiet and cozy room near the coast. Offers great value and a restful environment close to the beach.",
+    "adults": 2,
+    "size": "105 ft2",
+    "price": "$99",
+    "photos": [
+      "/Images/rooms-4.jpg",
+      "/Images/rooms-4-photo-1.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "type": "Luxury",
+    "title": "Seaside Heaven",
+    "image": "/Images/rooms-5.jpg",
+    "description": "Indulge in comfort and elegance by the sea. This luxury suite is designed for unforgettable coastal stays.",
+    "adults": 3,
+    "size": "75 ft2",
+    "price": "$89",
+    "photos": [
+      "/Images/rooms-5.jpg",
+      "/Images/rooms-5-photo-1.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "type": "Standard",
+    "title": "Tropical Paradise",
+    "image": "/Images/rooms-6.jpg",
+    "description": "Immerse yourself in tropical beauty with this well-equipped room. Great for couples or small families.",
+    "adults": 2,
+    "size": "50 ft2",
+    "price": "$39",
+    "photos": [
+      "/Images/rooms-6.jpg",
+      "/Images/rooms-6-photo-1.jpg"
+    ]
+  }
+]
