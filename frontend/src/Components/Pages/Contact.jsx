@@ -186,8 +186,10 @@ function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Our Location</h3>
               <p className="text-gray-300 text-sm">
-                12 Hilltop Lane<br />
-                Nuwara Eliya, Central Province 22200<br />
+                45 Galle Road
+                <br />
+                Colombo 03, Western Province 00300
+                <br />
                 Sri Lanka
               </p>
 

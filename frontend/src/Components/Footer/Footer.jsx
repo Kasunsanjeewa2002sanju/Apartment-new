@@ -157,9 +157,9 @@ function Footer() {
                       Main Office
                     </h5>
                     <p className="text-gray-300 text-sm">
-                      12 Hilltop Lane
+                      45 Galle Road
                       <br />
-                      Nuwara Eliya, Central Province 22200
+                      Colombo 03, Western Province 00300
                       <br />
                       Sri Lanka
                     </p>

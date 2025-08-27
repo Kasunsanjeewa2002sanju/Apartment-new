@@ -278,7 +278,7 @@ function RoomsDetails() {
               </h2>
               <div className="w-full rounded-xl overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126264.47339565857!2d80.7832!3d6.9483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c19decb3b7%3A0x1f67d51d4045e97f!2sNuwara+Eliya!5e0!3m2!1sen!2slk!4v1690000000000!5m2!1sen!2slk"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63321.33843762818!2d79.8282703!3d6.9319642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2594c9c9f3f6f%3A0xa1c8cb1c49f0a2b1!2sPort%20City%20Colombo!5e0!3m2!1sen!2slk!4v1690000000002!5m2!1sen!2slk"
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
@@ -286,6 +286,18 @@ function RoomsDetails() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
+              </div><br/>
+              <div className="w-full rounded-xl overflow-hidden shadow-md">
+                <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126327.30872626532!2d80.7214975!3d6.8021585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3a3bfc63c2b2d%3A0x9d3b2d69f6c7f3f6!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1690000000003!5m2!1sen!2slk"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen={true}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
               </div>
             </div>
           </div>
@@ -300,7 +312,8 @@ function RoomsDetails() {
             </div>
             <div className="flex justify-around bg-[#e8faff] py-3 rounded-xl text-[#1d5c63] font-medium text-sm">
               <div className="flex items-center gap-2">
-                <i className="ri-user-line text-lg"></i> Per Person: {room.forPerson}
+                <i className="ri-user-line text-lg"></i> Per Person:{" "}
+                {room.forPerson}
               </div>
               <div className="flex items-center gap-2">
                 <i className="ri-aspect-ratio-line text-lg"></i> Size:{" "}
@@ -439,10 +452,6 @@ function RoomsDetails() {
           </Swiper>
         </div>
       </div>
-
-      
-
-
     </>
   );
 }
